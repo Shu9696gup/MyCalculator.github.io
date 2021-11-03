@@ -8,8 +8,8 @@ for(item of buttons){
         buttonText=e.target.innerText;
         console.log(buttonText);
         if(buttonText=='AC'){
-            screen.innerText=" ";
-            screenValue="0";
+            screen.innerText=" 0";
+            screenValue="";
             console.log(111)
         }
         else if(buttonText=='='){
