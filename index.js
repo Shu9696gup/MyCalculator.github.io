@@ -9,7 +9,7 @@ for(item of buttons){
         console.log(buttonText);
         if(buttonText=='AC'){
             screen.innerText=" ";
-            screenValue="";
+            screenValue="0";
             console.log(111)
         }
         else if(buttonText=='='){
