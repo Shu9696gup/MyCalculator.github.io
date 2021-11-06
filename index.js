@@ -2,6 +2,7 @@ console.log("shuhbam gupta")
 let screen=document.getElementById('screen');
 
 buttons=document.querySelectorAll('button');
+let screenValue1='';
 let screenValue='';
 for(item of buttons){
     item.addEventListener('click',(e)=>{
@@ -9,30 +10,37 @@ for(item of buttons){
         console.log(buttonText);
         if(buttonText=='AC'){
             screen.innerText=" 0";
-            screenValue="";
+            screenValue1="";
             console.log(111)
         }
         else if(buttonText=='='){
-            screen.innerText=eval(screenValue);
-            screenValue=screen.innerText;
+            screen.innerText=eval(screenValue1);
+            screenValue1=screen.innerText;
             console.log(112)
         }
         else if(buttonText=="&#928;"){
             buttonText=3.14;
             console.log(piiiii)
-            screenValue+=buttonText;
-            screen.innerText=screenValue;
+            screenValue1+=buttonText;
+            screenValue=screenValue1;
+            screen.innerText=screenValue1;
         }
        
         else if(buttonText=='+/-'){
-            buttonText=screenValue-2*screenValue;
-            screenValue=buttonText;
+            buttonText=screenValue1-2*screenValue1;
+            screenValue1=buttonText;
+            screenValue=screenValue1;
+            screen.innerText=screenValue1;
+        }
+        else if(buttonText=='<-'){
+            screenValue1=screenValue;
             screen.innerText=screenValue;
         }
-
         else{
-            screenValue+=buttonText;
-            screen.innerText=screenValue;
+            screenValue=screenValue1;
+            screenValue1+=buttonText;
+            
+            screen.innerText=screenValue1;
            
         }
     })
